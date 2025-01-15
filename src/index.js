@@ -6,7 +6,7 @@ const userRoutes = require("./routes/userRoutes");
 const movieRoutes = require("./routes/movieRoutes");
 const cors = require('cors');
 const cron = require('node-cron');
-const { fetchAndStoreMovies } = require('./controllers/fetchController');
+const { fetchAndStoreMovies } = require('./scripts/fetchMovies');
 
 dbConnect();
  
