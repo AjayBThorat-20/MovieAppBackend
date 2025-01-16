@@ -32,13 +32,15 @@ A robust system for managing movies, including user authentication, movie scrapi
 ├── controllers/
 │   ├── authController.js    # Authentication logic
 │   ├── movieController.js   # Movie operations
-│   └── fetchController.js   # IMDb data scraping
 ├── routes/
 │   ├── authRoutes.js       # Auth endpoints
 │   ├── userRoutes.js       # User endpoints
 │   └── movieRoutes.js      # Movie endpoints
+├── script/
+│   ├── fetchMovies.js		# IMDb data scraping
 ├── index.js               # Main application file
-└── .env                  # Environment variables
+└── .env     
+              # Environment variables
 ```
 
 ## Comments Guide
