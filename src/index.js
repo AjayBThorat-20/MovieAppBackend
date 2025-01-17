@@ -6,7 +6,7 @@ const userRoutes = require("./routes/userRoutes");
 const movieRoutes = require("./routes/movieRoutes");
 const cors = require('cors');
 const cron = require('node-cron');
-const { fetchAndStoreMovies } = require('./scripts/fetchMovies');
+// const { fetchAndStoreMovies } = require('./scripts/fetchMovies');
 
 dbConnect();
  
@@ -25,18 +25,18 @@ app.use((err, req, res, next) => {
 });
 
 
-cron.schedule('52 23 * * *', async () => {
-  console.log('Running the fetchAndStoreMovies task...');
-  try {
-    await fetchAndStoreMovies();
-    console.log('Movie fetch task completed successfully');
-  } catch (error) {
-    console.error('Movie fetch task failed:', error);
-  } finally {
-    // End the Node.js process after the task is done
-    // process.exit();
-  }
-});
+// cron.schedule('16 15 * * *', async () => {
+//   console.log('Running the fetchAndStoreMovies task...');
+//   try {
+//     await fetchAndStoreMovies();
+//     console.log('Movie fetch task completed successfully');
+//   } catch (error) {
+//     console.error('Movie fetch task failed:', error);
+//   } finally {
+//     // End the Node.js process after the task is done
+//     // process.exit();
+//   }
+// });
 
 
 // middleware
